@@ -79,23 +79,21 @@
       }
       loadingBar.style.display = "block";
 
-      // var myGameInstance = null;
+      var myGameInstance = null;
       var script = document.createElement("script");
       script.src = loaderUrl;
       script.onload = () => {
         createUnityInstance(canvas, config, (progress) => {
           progressBarFull.style.width = 100 * progress + "%";
         }).then((unityInstance) => {
-          // myGameInstance = unityInstance;
-          unityInstance.SendMessage('Javascript_Hook', 'ChangeAuthorName', "Fernando Rodriguez");
-          unityInstance.SendMessage('Javascript_Hook', 'ChangeArtTitle', "Javascript");
-          unityInstance.SendMessage('Javascript_Hook', 'ChangeArtDescription', "Hello, this is a test. I am sending this information to my Unity instance through javascript in order to submit API information later on. Next test would be to send an image or video url to then be streamed.");
-          // console.log("This is my game instance:"+ myGameInstance);
+          myGameInstance = unityInstance;
+          console.log("This is unityInstance:"+ unityInstance);
+          console.log("This is myGameInstance:"+myGameInstance);
           loadingBar.style.display = "none";
         }).catch((message) => {
           alert(message);
         });
-      };
+      };        
       document.body.appendChild(script);
     </script>
     <script>
@@ -115,5 +113,7 @@
       requestAnimationFrame(render);
       //Comment out if you dont want the FPS to Show<<
     </script>
+    <script type="module" src="mongodb.js"></script>
+    <script src="Test.js"></script>
   </body>
 </html>

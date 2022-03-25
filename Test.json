@@ -1,0 +1,28 @@
+{
+    "Artist" : [
+        {
+            "Author": "Fernando Rodriguez",
+            "Title": "Javascript Hook",
+            "Description": "This is a description for whatever this is.",
+            "VideoURL": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
+          },
+          {
+            "Author": "Fredrick Johnson",
+            "Title": "Other Title",
+            "Description": "This is a Description for whatever this is.",
+            "VideoURL": "Http:other.url"
+          },
+          {
+            "Author": "Blake Shell",
+            "Title": "Error Prone",
+            "Description": "This is a Description for whatever this is.",
+            "VideoURL": "Http:other.url"
+          },
+          {
+            "Author": "Jessica Rabbit",
+            "Title": "Bugs Bunny",
+            "Description": "This is a Description for whatever this is.",
+            "VideoURL": "Http:other.url"
+          }
+    ]
+ }
